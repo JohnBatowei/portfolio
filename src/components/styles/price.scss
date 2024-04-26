@@ -1,0 +1,130 @@
+.experts{
+    width: 100%;
+    display: flex;
+    font-family: 'Mulish';
+    margin: -2em 0;
+    padding: 60px 25px;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    h2,p{
+        // flex-basis: 50%;
+        font-family: 'Mulish';
+        color:black;
+    }
+    h2{
+        font-size: 2.7rem;
+        width: 80%;
+        text-align: center;
+        font-weight: bolder;
+    }
+    p{
+        width: 65%;
+        color:rgba(0, 0, 0, 0.74);
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    @media(max-width: 700px){
+        flex-wrap: wrap;
+        padding: 5px;
+        h2,p{
+            padding: 0px;
+            flex-basis: 100%;
+            width: 100%;
+            // border: 2px solid red;
+        }
+        p{
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+.workss{
+    display: grid;
+   grid-template-columns: auto auto auto ;
+    transition: .3s ease-in-out;
+    place-content: space-evenly;
+    .box{
+        display: flex;
+        flex-direction: column;
+        place-content: space-between;
+        align-items: center;
+        background: rgb(255, 255, 255);
+        box-shadow: 1px 1px 8px black;
+        margin: .6em 1em;
+        padding: 25px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        flex-basis: 50%;
+        font-family: 'Poppins';  
+        height: 450px;
+        width: 22em;
+        h3{
+            font-size: 1.6rem;
+            width: 42%;
+            text-align:center;
+        }
+        h4{
+            font-family: 'Mulish';
+        }
+          span{
+            width: 50%;
+            height: 1px;
+            background: black;
+          }
+        h2 {
+            font-size: 2.7rem;
+        }
+        p{
+            font-family: 'Mulish';
+        }
+        a{
+            padding: 20px 30px;
+            background: rgb(30, 86, 190);
+            border-radius: 50px;
+            border: 1px solid transparent;
+            font-family: 'Mulish';
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            &:hover{
+                color: black;
+                background: rgb(255, 255, 255);
+                border-color: rgb(30, 86, 190);
+                
+            }
+        }
+    }
+
+    &>:nth-child(2){
+        background: rgb(30, 86, 190);
+        color: white;
+        span{
+            background: white;
+        }
+        a{
+            background: rgb(255, 255, 255);
+            color: black;
+            &:hover{
+                border: 1px solid white;    
+                color: white;
+                // border-color: rgb(255, 255, 255);
+                background: rgb(30, 86, 190);
+                // border-color: rgb(30, 86, 190);
+                
+            }
+        }
+    }
+    @media(max-width: 960px){
+           grid-template-columns: auto auto auto;
+    }
+    @media(max-width: 760px){
+           grid-template-columns: auto auto;
+        
+    }
+    @media(max-width: 560px){
+           grid-template-columns: auto;
+    }
+}

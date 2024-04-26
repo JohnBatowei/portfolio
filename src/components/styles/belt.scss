@@ -1,0 +1,35 @@
+.belt{
+    // border:2px solid rgba(0, 0, 0, 0.178);
+    display: flex;
+    width: 100%;
+    .box{
+        width: 150px;
+        height: 30px;
+        // border:2px solid red
+        background: #191970;
+    }
+//  &>:nth-child(1){
+//     background: rgb(71, 80, 201);
+//  }
+//  &>:nth-child(2){
+//     background: rgb(26, 29, 70);
+//  }
+//  &>:nth-child(3){
+//     background: rgb(26, 29, 70);
+//  }
+//  &>:nth-child(4){
+//     background: rgb(71, 164, 201);
+//  }
+//  &>:nth-child(5){
+//     background: rgb(71, 80, 201);
+//  }
+//  &>:nth-child(6){
+//     background: rgb(71, 80, 201);
+//  }
+//  &>:nth-child(7){
+//     background: rgb(71, 164, 201);
+//  }
+//  &>:nth-child(10){
+//     background: rgb(71, 80, 201);
+//  }
+}

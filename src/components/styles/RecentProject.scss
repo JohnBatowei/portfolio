@@ -1,0 +1,116 @@
+// Import slick carousel styles
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+
+// Customize carousel styles
+.top{
+  width: 100%;
+  display: flex;
+  font-family: 'Mulish';
+  margin: 2em 0 0 0;
+  padding: 60px 25px;
+  align-items: center;
+  gap: 2rem;
+  // flex-wrap: wrap;
+  h2,p{
+      flex-basis: 50%;
+      font-family: 'Mulish';
+  }
+  h2{
+      font-size: 3rem;
+  }
+
+  @media(max-width: 700px){
+      flex-wrap: wrap;
+      h2,p{
+          flex-basis: 100%;
+      }
+  }
+}
+
+.slide-wrapper{
+ margin-bottom: 3.5em;
+border:2px solid rgb(255, 255, 255);
+}
+
+.slick-slider {
+  width: 95%;
+  margin: 0 auto;
+  background-color: rgba(34, 34, 104, 0.048); // Transparent blue background
+  border-radius: 6px;
+  .slick-prev,
+  .slick-next {
+    font-size: 24px;
+    color: #555;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: color 0.3s;
+    
+    &:hover {
+      color: #000;
+    }
+  }
+  
+  .slick-prev {
+    left: -50px;
+  }
+  
+  .slick-next {
+    right: -50px;
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      
+      button {
+        font-size: 14px;
+        color: #555;
+        border: none;
+        background: transparent;
+        outline: none;
+        cursor: pointer;
+        transition: color 0.3s;
+        
+        &:hover {
+          color: #000;
+        }
+      }
+      
+      &.slick-active button {
+        color: #000;
+      }
+    }
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; // Add gap between images
+    
+    .image-wrapper-slide{
+      // border: 2px solid green;
+      // width: 60%;
+      height: 300px;
+      // position: relative;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+      }
+    }
+
+  }
+}
