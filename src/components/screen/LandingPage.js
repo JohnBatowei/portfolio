@@ -6,9 +6,11 @@ import Expert from './Expertise'
 import RecentProject from './RecentProject'
 import Price from './Price'
 import Footer from './Footer'
+import '../styles/landing-page.scss'
+
 const LandingPage = function(){
 return(
-        <>
+        <div className='landing-page'>
             <Navbar/>
             <Hero />
             <Belt />
@@ -17,7 +19,7 @@ return(
             <RecentProject />
             <Price />
             <Footer />
-        </>
+        </div>
 )
 }
 

@@ -1,86 +1,118 @@
-.reliability{
-    background: linear-gradient(to bottom, rgb(255, 255, 255) ,  rgb(255, 255, 255) );
-    .text{
-        font-size: 2.5rem;
+.reliability {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.685), rgba(255, 255, 255, 0.692));
+    .text {
+      font-size: 2.5rem;
+      font-family: 'Mulish';
+      width: 50rem;
+      text-align: center;
+      margin: 1em auto;
+    }
+    .group-content {
+      margin-top: 4em;
+      display: flex;
+      place-content: space-between;
+      gap: 4em;
+      padding: 12px;
+      align-items: center;
+    }
+    .img,
+    .right {
+      flex-basis: 50%;
+    }
+    .img {
+      height: 500px;
+      position: relative;
+      border-radius: 5px;
+      // background:red;
+      img {
+        position: absolute;
+        object-fit: cover;
+        // object-position: center;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .right {
+      .right-text {
+        font-size: 2em;
+        color: rgb(26, 26, 26);
         font-family: 'Mulish';
-        width: 50rem;
-        text-align: center;
-        margin: 1em auto;
-        // border: 2px solid red;
+        margin: 12px 0;
+      }
+      .r1-text {
+        font-family: 'Mulish';
+        margin: 1em 0 2em 0;
+        color: rgb(77, 77, 77);
+      }
+      .vision {
+        margin: 0.5em 0;
+        h3 {
+          font-family: 'Mulish';
+        }
+        p {
+          font-family: 'Mulish';
+          margin: 0.5em 0;
+          color: rgb(77, 77, 77);
+        }
+      }
     }
-    .group-content{
-        margin-top: 4em;
-        display: flex;
-        place-content: space-between;
-        gap: 4em;
-        padding: 12px;
-        // border: 2px solid red;
+    @media (max-width: 795px) {
+      .text {
+        font-size: 2rem;
+        width: 100%;
+      }
+      .right {
+        .right-text {
+          font-size: 1.5em;
+        }
+      }
+    }
+    @media (max-width: 760px) {
+      .group-content {
+        flex-wrap: wrap;
         align-items: center;
-        // flex-wrap: wrap;
+        place-content: center;
+      }
+      .img,
+      .right {
+        flex-basis: 100%;
+      }
     }
-    .img,.right{
-        flex-basis: 50%;
+  }
+  
+  /* Keyframes for slide-in animation */
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
     }
-    .img{
-        height: 500px;
-        position: relative;
-        // border: 2px solid red;
-        border-radius: 5px;
-        img{
-            position: absolute;
-            object-fit: cover;
-            right: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-        }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
-    .right{
-        .right-text{
-            font-size: 2em;
-            color: rgb(26, 26, 26);
-            font-family: 'Mulish';
-            margin: 12px 0;
-        }
-        .r1-text{
-            font-family: 'Mulish';
-            margin: 1em 0 2em 0;
-            color: rgb(77, 77, 77);
-        }
-
-        .vision{
-            margin: .5em 0;
-            h3{
-                font-family: 'Mulish';
-            }
-            p{
-                font-family: 'Mulish';
-                margin: .5em 0;
-                color: rgb(77, 77, 77);
-            }
-        }
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
     }
-
-    @media(max-width: 795px){
-        .text{
-            font-size: 2rem;
-           width: 100%;
-        }
-        .right{
-            .right-text{
-                font-size: 1.5em;
-            }
-        }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
-    @media(max-width: 760px){
-        .group-content{
-            flex-wrap: wrap;
-            align-items: center;
-            place-content: center;
-            // border: 2px solid red;
-        }
-        .img,.right{
-            flex-basis: 100%;
-        }
-    }
-}
+  }
+  
+  /* Animation classes */
+  .animate-left {
+    opacity: 0;
+    animation: slide-in-left 1s forwards;
+  }
+  
+  .animate-right {
+    opacity: 0;
+    animation: slide-in-right 1s forwards;
+  }
+  

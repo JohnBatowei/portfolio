@@ -91,6 +91,34 @@ const Expert = () => {
           </div>
         </div>
 
+        <div className="range-box">
+          <h4>Python</h4>
+          <div className="range-percent">
+            <span></span>
+          </div>
+        </div>
+
+        <div className="range-box">
+          <h4>MongoDB</h4>
+          <div className="range-percent">
+            <span></span>
+          </div>
+        </div>
+
+        <div className="range-box">
+          <h4>MySQL</h4>
+          <div className="range-percent">
+            <span></span>
+          </div>
+        </div>
+
+        <div className="range-box">
+          <h4>C/C++</h4>
+          <div className="range-percent">
+            <span></span>
+          </div>
+        </div>
+
       </div>
     </div>
   );

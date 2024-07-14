@@ -1,16 +1,53 @@
+import { useEffect } from 'react';
 import img from "../assets/logo.jfif";
-import '../styles/reli.scss'
+// import img from "../assets/AriTron Logo.PNG";
+import '../styles/reli.scss';
+
 const Reliability = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const elementsLeft = document.querySelectorAll('.scroll-left');
+      const elementsRight = document.querySelectorAll('.scroll-right');
+
+      elementsLeft.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add('animate-left');
+        }
+      });
+
+      elementsRight.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add('animate-right');
+        }
+      });
+    };
+
+    const isInViewport = (element) => {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="reliability">
-      <h2 className="text">Your Reliable Partner for Full Stack Web Development</h2>
+      <h2 className="text scroll-left">Your Reliable Partner for Full Stack Web Development</h2>
 
       <div className="group-content">
-        <div className="img">
-        <img src={img} alt="" />
+        <div className="img scroll-left">
+          <img src={img} alt="" />
         </div>
 
-        <div className="right">
+        <div className="right scroll-right">
           <h2 className="right-text">
             Transforming Complex Ideas into Seamless Web Applications
           </h2>
@@ -39,7 +76,6 @@ const Reliability = () => {
               forefront of emerging technologies and industry trends.
             </p>
           </div>
-          
         </div>
       </div>
     </div>

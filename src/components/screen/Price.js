@@ -1,7 +1,7 @@
 import "../styles/price.scss";
 const Price = () => {
   return (
-    <>
+    <div id="pricing">
       <div className="experts">
         <h2>Flexible Pricing for Customized Web Development Solutions</h2>
         <p>
@@ -18,7 +18,7 @@ const Price = () => {
           <h3>Basic Package</h3>
           <h4>For Small Projects</h4>
             <span></span>
-          <h2>$49.99</h2>
+          <h2>$120</h2>
           <p>Per project</p>
           <a href='/'>Get Started</a>
         </div>
@@ -27,7 +27,7 @@ const Price = () => {
           <h3>Medium Package</h3>
           <h4>For Medium Projects</h4>
             <span></span>
-          <h2>$79.99</h2>
+          <h2>$210</h2>
           <p>Per project</p>
           <a href='/'>Get Started</a>
         </div>
@@ -36,13 +36,13 @@ const Price = () => {
           <h3>Expert Package</h3>
           <h4>For Big Projects</h4>
             <span></span>
-          <h2>$99.99</h2>
+          <h2>$900</h2>
           <p>Per project</p>
           <a href='/'>Get Started</a>
         </div>
 
       </div>
-    </>
+    </div>
   );
 };
 

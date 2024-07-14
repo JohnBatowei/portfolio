@@ -16,7 +16,7 @@ const Navbar = function () {
         Batowei ariebi john
       </Link>
       <div className="group">
-        <Link to="/pricing">Pricing</Link>
+        <a href="#pricing">Pricing</a>
         <Link to="/contact">Contact</Link>
         <a href="#project">Projects</a>
         <Link to="/">Download CV</Link>
@@ -28,7 +28,7 @@ const Navbar = function () {
     </nav>
     <nav className={`nav-mobile ${show === true ? 'show' : ''}`}>
       <div className="group">
-        <Link to="/pricing">Pricing</Link>
+        <a href="#pricing">Pricing</a>
         <Link to="/contact">Contact</Link>
         <a href="#project">Projects</a>
         <Link to="/">Download CV</Link>
